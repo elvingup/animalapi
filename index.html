@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treinamento de CRUD com API: de modo a informar Animals API do site DEVS API Café pra Dev</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css_own/app.css">
 </head>
+
 <body>
-    
+    <main class="container">
+        <h1 id="titulo"><strong>
+            API PARA INCLUIR ANIMAIS
+        </strong></h1>
+            
+
+        <!-- input para adicionar o nome do animal -->
+        <p id="incluir">
+            <label for="nome">Informe o nome do animal a ser incluído:</label>
+            <input type="text" id="nome">
+            <button type="submit" class="btn btn-light" id="incluirnome" onclick="incluir()">Incluir Aqui</button>
+        </p>
+
+        <!-- tabela para exibir e atualizar as informações cadastradas -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome do Animal</th>
+                    <th colspan="2">Atualização</th>
+                </tr>
+            </thead>
+            <tbody onload="listagem()"></tbody>
+        </table>
+    </main>
+
+
+    <script src="./app.js"></script>
 </body>
+
 </html>
